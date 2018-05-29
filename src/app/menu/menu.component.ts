@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Dish } from '../shared/dish';
 
-
-export class MenuComponent implements OnInit {
-
-const dishes: Dish[] = [
+	
+const DISHES: Dish[] = [
                          {
                            name:'Uthappizza',
                            image: '/assets/images/uthappizza.png',
@@ -35,8 +33,8 @@ const dishes: Dish[] = [
                            description:'A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms'                        }
                         ];
 
-						
-						@Component({
+									
+@Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
@@ -44,16 +42,15 @@ const dishes: Dish[] = [
 
    export class MenuComponent implements OnInit {
 
-  dishes = DISHES;
+  dishes: Dish[] = DISHES;
 
-  selectedDish = DISHES[0];}
+  selectedDish: Dish = DISHES[0];
 						
 								
-  constructor() { }
+ constructor() { } 
 
-  ngOnInit() {
+ ngOnInit() { 
   }
-
-  
-  
 }
+
+
